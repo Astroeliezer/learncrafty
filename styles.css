@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0D47A1;
+    color: #FFF;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1976D2;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    min-height: 70vh;
+}
+
+section {
+    background-color: #2196F3;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}/* Reset some default styles */
+body, h1, h2, p, select {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Background gradient */
+body {
+    background: linear-gradient(90deg, #061161, #780206, #00175A);
+    color: #FFF;
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #0633A1;
+}
+
+h1 {
+    font-size: 36px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    min-height: 70vh;
+}
+
+section {
+    background: linear-gradient(45deg, #067A03, #07A16A);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    background: #FF5733;
+    color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #FFA933;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#visualization-container {
+    width: 100%;
+    height: 400px;
+    background: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #0633A1;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+button {
+    background-color: #4CAF50;
+    color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#visualization-container {
+    width: 100%;
+    height: 400px;
+    background-color: #FFF;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1976D2;
+}
