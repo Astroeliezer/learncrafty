@@ -1,36 +1,4 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #0D47A1;
-    color: #FFF;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #1976D2;
-}
-
-h1 {
-    font-size: 36px;
-}
-
-main {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    min-height: 70vh;
-}
-
-section {
-    background-color: #2196F3;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
-    text-align: center;
-}/* Reset some default styles */
+/* Reset some default styles */
 body, h1, h2, p, select {
     margin: 0;
     padding: 0;
@@ -39,7 +7,7 @@ body, h1, h2, p, select {
 
 /* Background gradient */
 body {
-    background: linear-gradient(90deg, #061161, #780206, #00175A);
+    background: linear-gradient(90deg, #1a2351, #ff6f61);
     color: #FFF;
     overflow: hidden;
 }
@@ -47,13 +15,14 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background: #0633A1;
+    background: #1a2351;
 }
 
 h1 {
     font-size: 36px;
     letter-spacing: 4px;
     text-transform: uppercase;
+    color: #FFD700; /* Gold color */
 }
 
 main {
@@ -65,7 +34,7 @@ main {
 }
 
 section {
-    background: linear-gradient(45deg, #067A03, #07A16A);
+    background: linear-gradient(45deg, #40ff88, #ffa040);
     border-radius: 20px;
     padding: 20px;
     margin: 20px;
@@ -74,18 +43,19 @@ section {
 }
 
 button {
-    background: #FF5733;
+    background: #ff5733;
     color: #FFF;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background 0.3s;
+    transition:background 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 button:hover {
-    background: #FFA933;
+    background: #ff8c63;
 }
 
 input[type="file"] {
@@ -103,34 +73,32 @@ input[type="file"] {
 footer {
     text-align: center;
     padding: 10px;
-    background: #0633A1;
+    background: #1a2351;
     position: absolute;
     bottom: 0;
     width: 100%;
+    color: #FFD700; /* Gold color */
 }
 
-
-button {
-    background-color: #4CAF50;
-    color: #FFF;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
+/* Example: Rounded shapes for inputs */
 input[type="file"] {
     display: none;
 }
 
-#visualization-container {
+input[type="text"], select {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    outline: none;
     width: 100%;
-    height: 400px;
-    background-color: #FFF;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #1976D2;
+/* Example: Modern graphics (adjust the properties as needed) */
+#data-import {
+    background: linear-gradient(45deg, #0099CC, #FF66CC);
+}
+
+#data-visualization {
+    background: linear-gradient(45deg, #66CC99, #FFCC66);
 }
