@@ -3,6 +3,17 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://Astro:6013@localhost/learn_crafty'
+db = SQLAlchemy(app)
+
+# Create a model to represent the data
+class Data(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    # Define columns for your data, e.g., column1, column2, ...
+
 
 app = Flask(__name, template_folder="templates")
 app.config['UPLOAD_FOLDER'] = 'uploads'  # Define the UPLOAD_FOLDER here
@@ -11,6 +22,34 @@ app.config['UPLOAD_FOLDER'] = 'uploads'  # Define the UPLOAD_FOLDER here
 data = pd.DataFrame()
 
 # Sample data storage (you can replace this with a database)
+import mysql.connector
+
+# Establish a database connection
+conn = mysql.connector.connect(
+    host="localhost",
+    user="Astro",
+    password="6013",
+    database="learn_crafty",
+)
+
+# Create a cursor object
+cursor = conn.cursor()
+
+# Execute an SQL script
+sql_script = """
+INSERT INTO users (username, email) VALUES
+   ('john_doe', 'john@example.com'),
+   ('jane_doe', 'jane@example.com');
+"""
+cursor.execute(sql_script)
+
+# Commit the changes
+conn.commit()
+
+# Close the cursor and the connection
+cursor.close()
+conn.close()
+
 data = None
 
 def process_data(data):
@@ -84,6 +123,7 @@ def analyze_data_route():
     data = session.get('data', None)  # Retrieve data from the session
     analyze_data(data)  # Call the data analysis function
     return jsonify({'message': 'Data analysis and visualization complete'})
-
+with app.app_context():
+    db.create_all()
 if __name__ == '__main':
     app.run(debug=True)
